@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1599057199042.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B6048E6D",
+    "lastKnownWriteTime" : 1599198419,
+    "last_content_update" : 1599198419986,
+    "path" : "~/Documents/Master of Business Analytics/2020 Semester 2/ETC 5523 Communicating with Data/Assignments/ETC5523 - Blog-Post-1/config.toml",
+    "project_path" : "config.toml",
+    "properties" : {
+        "cursorPosition" : "8,32",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "toml"
+}

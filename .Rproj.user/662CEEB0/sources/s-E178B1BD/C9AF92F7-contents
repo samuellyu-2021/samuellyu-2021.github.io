@@ -1,0 +1,144 @@
+---
+title: "Untitled"
+author: "Samuel Lyubic"
+date: "02/09/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r package-installation}
+install.packages("coronavirus")
+devtools::install_github("RamiKrispin/coronavirus")
+devtools::install_github("joachim-gassen/tidycovid19")
+remotes::install_github("kjhealy/covdata")
+remotes::install_github(" /COVID19")
+```
+
+```{r load-library}
+library(coronavirus)
+library(tidyverse)
+library(tidycovid19)
+library(covdata)
+
+library(coronavirus)
+library(tidyverse)
+library(lubridate)
+library(gridExtra)
+library(DT)
+
+
+update_dataset()
+```
+
+```{r data}
+data("coronavirus") 
+library(COVID19)
+
+covid_cases <- coronavirus %>%
+  filter(country == "Serbia")
+
+covid_cases %>%
+  filter(cases > -1000 & cases < 1000) %>%
+  ggplot(aes(x = date,
+             y = cases,
+             colour = type)) +
+  geom_point()
+
+COVID19 <- covid19() 
+covid19_measures <- COVID19 %>% 
+  filter(id == "SRB")
+
+covdata <- covnat
+
+covid_df <- download_merged_data(cached = TRUE, silent = TRUE) %>%
+  filter(iso3c == "SRB")
+
+```
+
+```{r select-variables}
+covid_srb <- covid_df %>%
+  select(date, confirmed, deaths, soc_dist, mov_rest) %>%
+  mutate(month = month(date, labe = TRUE, abbr = TRUE),
+         lag_confirmed = lag(confirmed),
+         lag_deaths = lag(deaths),
+         daily_cases = confirmed - lag_confirmed,
+         daily_deaths = deaths - lag_deaths,
+         soc_dist = as.factor(soc_dist),
+         mov_rest = as.factor(mov_rest)) %>%
+  filter(month >= "Feb") %>%
+  select(-lag_confirmed, -lag_deaths)
+```
+
+```{r plot-daily-cases-deaths}
+cases_plot <- covid_srb %>% 
+  ggplot(aes(x = date,
+             y = daily_cases,
+             color = "green")) +
+  #geom_smooth(alpha = .1, se = FALSE) +
+  geom_col(stat = "identity")
+
+
+deaths_plot <- covid_srb %>%
+  ggplot(aes(x = date,
+           y = daily_deaths)) +
+  geom_col(stat = "identity")
+
+grid.arrange(cases_plot, deaths_plot, nrow = 2)
+```
+
+```{r summary-statistics}
+#finding the average of the last five days, every day
+covid_growth_rate <- covid_srb %>%
+  mutate((five_day_ave = (daily_cases + lag(daily_cases) + lag(daily_cases, n = 2) + lag(daily_cases, n = 3) + lag(daily_cases, n = 4))/5),
+         growth_rate = five_day_ave/lag(five_day_ave),
+         growth_rate = round((growth_rate), 2),
+         growth_rate = replace(growth_rate, is.infinite(growth_rate), NA)) %>%
+  replace_na(list(growth_rate = 0)) %>%
+  filter(month < "Sep")
+
+
+covid_summary <- covid_growth_rate %>%
+  group_by(month) %>%
+  summarise(mean_growth_rate = mean(growth_rate),
+            mean_daily_cases = mean(daily_cases),
+            mean_daily_deaths = mean(daily_deaths))
+```
+
+```{r proportion-distancing-measure}
+dist_monthly_proportion <- covid_srb %>%
+  group_by(month, soc_dist) %>%
+  summarise(prop = n()) %>%
+  mutate(proportion = round(((prop/sum(prop))*100), 2)) %>%
+  ungroup() %>%
+  select(month, soc_dist, proportion) %>%
+  pivot_wider(names_from = "soc_dist",
+              values_from = "proportion") %>%
+  mutate_all(~replace(., is.na(.), 0)) %>%
+  rename(zero_measures = `0`,
+         one_measure = `1`,
+         two_measures = `2`,
+         three_measures = `3`,
+         four_measures = `4`,
+         five_measures = `5`,
+         six_measures = `6`)
+
+sketch = htmltools::withTags(table(
+  class = 'display',
+  thead(
+    tr(
+      th(colspan = 1, 'Social Distance'),
+    ),
+    )
+  )
+)
+print(sketch)
+
+dist_monthly_proportion %>%
+  datatable(class = 'cell-border stripe')
+  
+
+```
+

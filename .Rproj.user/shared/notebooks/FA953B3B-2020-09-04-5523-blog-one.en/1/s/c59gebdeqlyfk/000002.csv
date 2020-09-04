@@ -1,0 +1,2 @@
+"0","covid_df <- download_merged_data(cached = TRUE, silent = TRUE) %>%"
+"0","  filter(iso3c == ""SRB"")"
