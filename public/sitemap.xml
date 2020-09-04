@@ -34,7 +34,12 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-09-04T02:20:49+10:00</lastmod>
+    <lastmod>2020-09-04T23:45:06+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/blog-one/</loc>
+    <lastmod>2020-09-04T23:45:06+10:00</lastmod>
   </url>
   
   <url>
@@ -43,8 +48,18 @@
   </url>
   
   <url>
+    <loc>/post/coronavirus/</loc>
+    <lastmod>2020-09-04T23:31:10+10:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/blog_one/5523-blog-one/</loc>
     <lastmod>2020-09-04T02:20:49+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/covid19/</loc>
+    <lastmod>2020-09-04T23:45:06+10:00</lastmod>
   </url>
   
   <url>
@@ -54,12 +69,12 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-09-04T02:20:49+10:00</lastmod>
+    <lastmod>2020-09-04T23:45:06+10:00</lastmod>
   </url>
   
   <url>
     <loc>/tag/serbia/</loc>
-    <lastmod>2020-09-04T02:20:49+10:00</lastmod>
+    <lastmod>2020-09-04T23:45:06+10:00</lastmod>
   </url>
   
   <url>
@@ -68,8 +83,13 @@
   </url>
   
   <url>
+    <loc>/category/statistics-politics/</loc>
+    <lastmod>2020-09-04T23:45:06+10:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/</loc>
-    <lastmod>2020-09-04T02:20:49+10:00</lastmod>
+    <lastmod>2020-09-04T23:45:06+10:00</lastmod>
   </url>
   
   <url>
