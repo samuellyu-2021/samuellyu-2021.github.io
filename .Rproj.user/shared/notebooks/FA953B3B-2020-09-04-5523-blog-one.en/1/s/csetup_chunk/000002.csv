@@ -1,4 +1,4 @@
-"0","knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.align = ""centre"")"
+"0","knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.align = ""center"")"
 "0","library(coronavirus)"
 "0","library(tidycovid19)"
 "0","library(tidyverse)"

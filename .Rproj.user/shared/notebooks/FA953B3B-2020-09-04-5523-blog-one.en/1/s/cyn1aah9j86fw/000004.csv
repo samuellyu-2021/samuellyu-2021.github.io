@@ -26,7 +26,7 @@
 "0","           fill = ""#404040"") +"
 "0","  ggtitle(""Daily Deaths"") +"
 "0","  xlab(""Date"") +"
-"0","  ylab(""Daily Cases"") +"
+"0","  ylab(""Daily Deaths"") +"
 "0","  theme_linedraw() +"
 "0","  scale_x_date(breaks = 'month',"
 "0","               date_labels = ""%b %d"") +"

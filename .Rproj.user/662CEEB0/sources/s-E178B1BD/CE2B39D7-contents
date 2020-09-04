@@ -9,8 +9,8 @@ categories:
 tags:
   - Serbia
   - Coronavirus
-subtitle: 'An analysis into how coronavirus may have impacted Serbias election'
-summary: 'An analysis into how coronavirus may have impacted Serbias election'
+subtitle: 'An analysis into how coronavirus may have impacted Serbia's election'
+summary: 'An analysis into how coronavirus may have impacted Serbia's election'
 authors: []
 lastmod: '2020-09-04T02:20:49+10:00'
 featured: no
@@ -22,7 +22,7 @@ projects: []
 ---
 
 ```{r setup, include = FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.align = "centre")
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.align = "center")
 library(coronavirus)
 library(tidycovid19)
 library(tidyverse)
@@ -44,12 +44,12 @@ covid_df <- download_merged_data(cached = TRUE, silent = TRUE) %>%
 
 Coronavirus was labelled a pandemic on the 11th of March and since then has wreaked havoc across the world, leaving individuals, economies and governments scrambling to find a way through this global event. There have been a range of measures and policies issued by governments across the world to try combat and overcome the devastation that coronavirus has inflicted. Many of these measures involve social distancing, which can involve restricting the number of people that can be within a certain radius of each other as well as the number of people that can collectively be in a public space together, as such many proceedings requiring people to gather are now considered illegal and a risk to public health and safety resulting in their postponement or cancellation. An event such as an election would usually not have been considered it was safe or not, is now unable to go forward as, in order for an election to take place the citizens of a country are required to vote and in order to vote, the citizens need to congregate, usually there would be nothing unique about this statement however, given the global event that world has been stricken with, it would be seem an election would be a hard thing to pull off, that is, unless you’re Serbia. 
 
-Serbia just recently held a parliamentary election on June 21st 2020 in the heart of the global pandemic that is the Coronavirus. Many citizens, pundits and opposing parties have raised concerns over the legitimacy of the election as many people believe it was wrought with the feeling of an authoritarian regime rather than a democratic election, given the option to vote were very limited due to the parliamentary boycott that took place whereby the Serbia Progressive Party (SNS) almost ran unopposed as their opposition boycotted the election. Given the boycot that took place, many reports indicate that the SNS were looking to have the election as soon as possible leading to falsified reports of the coronavirus impact and putting the nation's health and safety at risk for the personal gain of the party[https://balkaninsight.com/2020/07/17/vucic-is-paying-a-price-for-serbias-bogus-elections/], which indicates coronavirus has had a significant impact on the election and this potential link will be further explored to assess how coronavirus may have assisted the SNS party into re-election.
+Serbia just recently held a parliamentary election on June 21st 2020 in the heart of the global pandemic that is the Coronavirus. Many citizens, pundits and opposing parties have raised concerns over the legitimacy of the election as many people believe it was wrought with the feeling of an authoritarian regime rather than a democratic election, given the option to vote were very limited due to the parliamentary boycott that took place whereby the Serbia Progressive Party (SNS) almost ran unopposed as their opposition boycotted the election. Given the boycott that took place, many reports indicate that the SNS were looking to have the election as soon as possible leading to falsified reports of the coronavirus impact and putting the nation's health and safety at risk for the personal gain of the party @Vaso, which indicates coronavirus has had a significant impact on the election and this potential link will be further explored to assess how coronavirus may have assisted the SNS party into re-election.
 
 
 # The Data
 
-The data used in the analysis has been sourced from the _tidycovid19_ package which has been developed by Joachim Gassen [https://github.com/joachim-gassen/tidycovid19] with data being pulled from:
+The data used in the analysis has been sourced from the _tidycovid19_ package which has been developed by Joachim Gassen @tidyCo with data being pulled from:
   - The John Hopkins University Center for Systems Science and Engineering, 
   - European Centre for Disease Prevention and Control
   - Our World in Data
@@ -64,7 +64,7 @@ The key variables being:
   - Soc_dist: The number of social distancing measures reported up to date by ACAPS, net of lifted restrictions
 
 For the analysis to take place, the following variables were created:
-  - Growth_factor: A measure of how fast the numbers of a new cases are going up or down. Which is calculated by taking the daily reported cases and dividing them by the average of the reported cases for the previous five days. by  A growth factor above 1 indicates the numbers are going up and a growth factor below 1 indicates the virus is getting under control. [https://www.abc.net.au/news/2020-04-10/coronavirus-data-australia-growth-factor-covid-19/12132478?nw=0].
+  - Growth_factor: A measure of how fast the numbers of a new cases are going up or down. Which is calculated by taking the daily reported cases and dividing them by the average of the reported cases for the previous five days. by  A growth factor above 1 indicates the numbers are going up and a growth factor below 1 indicates the virus is getting under control @abc.
   - Change_cases%: Measures the percent change in confirmed daily cases from the previous day.  
   - Change_deaths%: Measures the percent change in confirmed deaths from the previous day.
  
@@ -84,7 +84,7 @@ covid_srb <- covid_df %>%
 
 # Serbia reacts to coronavirus
 
-Prior to being labelled a pandemic, the novel coronavirus had already run through countries like China and Italy causing mass devesation giving the virus global attention. On February 26th one of the presidents, Aleksandar Vucic, advisors making light of the virus referring to it as "the funniest virus" [https://balkaninsight.com/2020/04/03/serbia-pins-coronavirus-blame-on-returning-serbs-concealing-infection/] subsequently, the virus was labelled a pandemic on teh 11th of March and the Serbian president declared a state of emergency on the 15th of March [https://www.srbija.gov.rs/vest/en/151398/state-of-emergency-declared-throughout-serbia.php]. Figure \@ref(fig:plot-daily-cases-deaths) visualises both the counts for the daily confirmed cases and daily deaths for Serbia, with cases and deaths along the y axis and the date on the x axis. The verticle red lines indicate declerations of state of emergencies, the orange line indicates the state of emergency being called off and the blue line indicates the serbian election. It is evident that Serbia saw a steep accumulation of cases and deaths from the middle of May through to the middle of April and then a somewhat declining trend of cases and deaths from may through to the end of July where there was again a signifcant increase in cases and deaths. 
+Prior to being labelled a pandemic, the novel coronavirus had already run through countries like China and Italy causing mass devesation giving the virus global attention. On February 26th one of the presidents, Aleksandar Vucic, advisors making light of the virus referring to it as "the funniest virus" @Stoj subsequently, the virus was labelled a pandemic on teh 11th of March and the Serbian president declared a state of emergency on the 15th of March @Stateof. Figure \@ref(fig:plot-daily-cases-deaths) visualises both the counts for the daily confirmed cases and daily deaths for Serbia, with cases and deaths along the y axis and the date on the x axis. The verticle red lines indicate declerations of state of emergencies, the orange line indicates the state of emergency being called off and the blue line indicates the serbian election. It is evident that Serbia saw a steep accumulation of cases and deaths from the middle of May through to the middle of April and then a somewhat declining trend of cases and deaths from may through to the end of July where there was again a signifcant increase in cases and deaths. 
 
 
 ```{r plot-daily-cases-deaths, fig.cap = "Visualises the daily counts for confirmed cases and deaths"}
@@ -169,15 +169,15 @@ covid_average_summary <- covid_growth_rate %>%
   select(date, month, growth_rate, daily_cases, pct_change_cases, daily_deaths, pct_change_deaths) %>%
   rename(`change_deaths%` = pct_change_deaths,
          `change_cases%` = pct_change_cases,
-         growth_factor = growth_rate)
+         growth_factor = growth_rate) 
 
 table_averages_summary <- covid_average_summary %>%
   group_by(month) %>%
   summarise(`Growth_Factor_Ave` = round((mean(growth_factor )), 3),
             `Daily_Cases%_Ave` = round((mean(`change_cases%`)),3),
-            `daily_deaths%_ave` = round((mean(`change_deaths%`)), 3)) %>%
+            `Daily_Deaths%_Ave` = round((mean(`change_deaths%`)), 3)) %>%
   rename(Month = month) %>%
-  select(Month,`Growth_Factor_Ave`, `Daily_Cases%_Ave`)
+  select(Month,`Growth_Factor_Ave`)
 
 ave_table <- table_averages_summary %>%
 datatable(class = 'cell-border stripe', rownames = FALSE, extensions = 'FixedColumns', options = list(
@@ -224,7 +224,7 @@ dataTables_ScrollHeadInner { padding-right : 10px; }
 frameWidget(summary_table)
 ```
 
-Table \@ref(fig:summary-table-widget) presents the growth factor, daily confirmed cases and deaths and percent change in daily confirmed cases and deaths since March, with Table \@ref(fig:summary-ave-widget) showing the monthly averages for those statistics. The recorded daily growth rate, percentage change in daily cases and deaths and daily cases and death count can be viewed through Table \@ref(fig:summary-table-widget). By looking at Table \@ref(fig:summary-ave-widget) the averages for those statistics can viewed, which shows that in March and April the daily confirmed cases on average as growing and as growth factor was 1.129 and 1.036 showing the growth factor was consistently above 1 for two months straight andt the virus was not undercontrol. This resulting in social distancing measures to increase across March and April, as shown by Table \@ref(fig:measure-widget-plot) march was split between zero and one measure while 86.33% of April was spent with six social distancing restrictions in place  
+Table \@ref(fig:summary-table-widget) presents the growth factor, daily confirmed cases and deaths and percent change in daily confirmed cases and deaths since March, with Table \@ref(fig:summary-ave-widget) showing the monthly averages for those statistics. The recorded daily growth rate, percentage change in daily cases and deaths and daily cases and death count can be viewed through Table \@ref(fig:summary-table-widget). By looking at Table \@ref(fig:summary-ave-widget) the averages for those statistics can viewed, which shows that in March and April the daily confirmed cases on average as growing and as growth factor was 1.129 and 1.036 showing the growth factor was consistently above 1 for two months straight andt the virus was not undercontrol. This resulting in social distancing measures to increase across March and April, as shown by Table \@ref(fig:measure-widget-plot) march was split between zero and one measure while 86.33% of April was spent with six social distancing restrictions in place. Although not intended, these measures also may have assisted the governemnt in quelling the anti-governemnt protest, which have been common in Serbia since the 90's, that were being staged through the begining of 2020 by having legally imposed social distance restrictions @Protest.
 
 
 
@@ -234,8 +234,9 @@ frameWidget(ave_table)
 ```
 
 
+However, May looked quite different as Table \@ref(fig:summary-ave-widget) shows a growth factor dropping to 0.951 which is further visualised by the steep drop in cases that can be seen at the end of April in Figure \@ref(fig:plot-daily-cases-deaths) visuaulises, with the pandemic being declared beaten on the 6th of May as shown by the orange line.
 
-
+The reduced figures as claimed by BIRN were a result of the real numbers bring covered up @EWB. During this period the government declared the fight won with the president praising the work he and his team did to combat the virus and such allowed gatherings, sports events and loosened up restricitons over May @EWB, which is in stark contrast to the restrictions that were some Europes tightest being imposed days before. The easement of restrictions and declartion of victory over Coronavirus seemed to have been part of the election campaign to promote for re-election, given the boycot of the other parties, if there was to be an election the SNS would be practically unopposed. Furthermore, given the health risk that many thought was still present @balk, there was on record the lowest turn out of voters further playing into the hands of the SNS. 
 
 
 ```{r measure-widget-plot, fig.cap = "Table displaying the proportion each measure has been used in each month"}
@@ -244,6 +245,8 @@ frameWidget(measure_pct)
 
 
 
-This will be a conclusion. 
+As a result, on June 21st 2020 an election was held and the SNS were re-elected back into parliament. On the morning after the election, Dr Predrag Kon, one of the most recogisable expert at the Crisis Staff of the Government of Serbia announced the situation has worsened, which is shown by the growth factor of 1.068 for June, which mostly came towards the end of June, and 1.017 for July subsequently leading to the Serbian government announcing a second state of emergency on July 3rd. Thus potentially showing that the coronavirus was used somewhat like a tool by the Serbian parliement in power in order to have their party re-elected. 
 
+That's a one for one in election campaigns for Covid19!
 
+# Reference 

@@ -7,5 +7,5 @@
 "0","         daily_deaths = deaths - lag_deaths,"
 "0","         soc_dist = as.factor(soc_dist),"
 "0","         mov_rest = as.factor(mov_rest)) %>%"
-"0","  filter(month >= ""Feb"") %>%"
+"0","  filter(month >= ""Feb"") %>% "
 "0","  select(-lag_confirmed, -lag_deaths)"
