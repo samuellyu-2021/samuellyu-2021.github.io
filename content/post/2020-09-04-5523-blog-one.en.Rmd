@@ -9,8 +9,8 @@ categories:
 tags:
   - Serbia
   - Coronavirus
-subtitle: ''
-summary: ''
+subtitle: 'An analysis of the impact that coronavirus had on the Serbian parliamentary election.'
+summary: 'An analysis of the impact that coronavirus had on the Serbian parliamentary election.'
 authors: []
 lastmod: '2020-09-04T02:20:49+10:00'
 featured: no
@@ -28,7 +28,7 @@ projects: []
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.align = "centre")
 library(coronavirus)
 library(tidycovid19)
-library(tidyverse)
+library(tidyverse) 
 library(lubridate)
 library(gridExtra)
 library(DT)

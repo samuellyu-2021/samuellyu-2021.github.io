@@ -1,0 +1,202 @@
+---
+title: 'Irelands Fight Against'
+author: Samuel Lyubic
+date: '2020-09-12'
+slug: blog-post-two
+categories: []
+tags: []
+subtitle: 'Whatever blog post two is about'
+summary: ''
+authors: []
+lastmod: '2020-09-12T15:24:36+10:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.align = "centre")
+library(coronavirus)
+update_dataset()
+library(tidycovid19)
+library(covdata)
+library(tidyverse) 
+library(lubridate)
+library(gridExtra)
+library(DT)
+library(widgetframe)
+library(kableExtra) 
+library(httpuv)
+library(ggridges)
+library(zoo)
+```
+
+```{r data-sources}
+corona_ire <- download_merged_data(cached = TRUE, silent = TRUE) %>%
+  filter(iso3c == "IRL")
+covid19_ire <- refresh_coronavirus_jhu() %>%
+  filter(location == "Ireland")
+covdata_ire <- covnat %>%
+  filter(iso3 == "IRL")
+apple_mobility_ire <- apple_mobility %>%
+  filter(country == "Ireland")
+```
+
+```{r change-cases-deaths-per-100k, fig.width = 12}
+cases_deaths_per_100k <- covdata_ire %>%
+  mutate(cases_per_100k = (cases/pop)*100000,
+         deaths_per_100k = (deaths/pop)*10000)
+```
+
+```{r cases-death-plot}
+
+#think about making it per100k but also maybe not,as im not comparing with another country
+cases_deaths_per_100k %>%
+  filter(date >= '2020-03-14') %>%
+  ggplot(aes(x = date,
+             y = cases)) +
+  geom_segment(aes(x = date, 
+                   xend = date, 
+                   y = 0, 
+                   yend = cases)) +
+  geom_point(size = 1, 
+             color = "#8fe0bb", 
+             fill = alpha("#dcdf3c", 0.3), 
+             alpha = 0.7, 
+             shape = 21,
+             stroke = 2) +
+  geom_line(alpha = .5) +
+  theme_minimal()
+
+cases_deaths_per_100k %>%
+  filter(date >= '2020-03-14') %>%
+  ggplot(aes(x = date,
+             y = deaths)) +
+  geom_segment(aes(x = date, 
+                   xend = date, 
+                   y = 0, 
+                   yend = deaths)) +
+  geom_point(size = 1, 
+             color = "#8fe0bb", 
+             fill = alpha("#b23831", 0.3), 
+             alpha = 0.7, 
+             shape = 21,
+             stroke = 2) +
+  geom_line(alpha = .5) +
+  theme_minimal()
+```
+
+```{r restriction-measures}
+corona_ire_long <- corona_ire %>%
+  pivot_longer(c("soc_dist", "mov_rest", "pub_health"),
+               names_to = "measure",
+               values_to = "number_measures") %>%
+  select(date, measure, number_measures, confirmed) %>%
+  mutate(month = month(date, abbr = TRUE, label = TRUE)) %>%
+  group_by(month) %>%
+  mutate(day_number = day(date),
+         day_number = as.numeric(date))
+
+corona_ire_long %>%
+  filter(date >= '2020-03-14') %>%
+  ggplot(aes(x = date,
+             y = number_measures)) +
+  geom_line() +
+  facet_wrap(~measure)
+
+library(viridis)
+
+corona_ire_long %>%
+  filter(date >= '2020-03-14') %>%
+  ggplot(aes(x = number_measures,
+             y = month,
+             fill = "#b23831")) +
+  geom_density_ridges(alpha = .5) +
+  facet_wrap(~measure)
+
+corona_ire_clean <- corona_ire %>%
+  select(date, soc_dist, mov_rest, pub_health, confirmed) %>%
+  mutate(month = month(date, abbr = TRUE, label = TRUE)) %>%
+  group_by(month) %>%
+  mutate(day_number = day(date),
+         day_number = as.numeric(date))
+
+soc_dist_plot <- corona_ire_clean %>%
+  filter(date >= '2020-03-14') %>%
+  ggplot(aes(x = soc_dist,
+             y = month,
+             fill = "#b23831")) +
+  geom_density_ridges(alpha = .5) 
+
+mov_res_plot <- corona_ire_clean %>%
+  filter(date >= '2020-03-14') %>%
+  ggplot(aes(x = mov_rest,
+             y = month,
+             fill = "#b23831")) +
+  geom_density_ridges(alpha = .5) 
+
+pub_health <- corona_ire_clean %>%
+  filter(date >= '2020-03-14') %>%
+  ggplot(aes(x = pub_health,
+             y = month,
+             fill = "#b23831")) +
+  geom_density_ridges(alpha = .5) 
+  
+```
+
+
+```{r baseline-movement}
+baseline_movement <- corona_ire %>%
+  filter(date <= '2020-02-22') %>% 
+  select(apple_mtr_walking, apple_mtr_driving, apple_mtr_transit) %>%
+  summarise(walk_baseline = mean(apple_mtr_walking),
+            drive_baseline = mean(apple_mtr_driving),
+            transit_baseline = mean(apple_mtr_transit))
+```
+
+```{r change-movement}
+movement_long <- corona_ire %>%
+  pivot_longer(c("apple_mtr_walking", "apple_mtr_driving", "apple_mtr_transit"),
+               names_to = "movement",
+               values_to = "move_pct") %>%
+  filter(date >= '2020-02-23')
+```
+
+```{r plot-movement}
+movement_long %>%
+  ggplot(aes(x = date,
+             y = move_pct,
+             color = movement)) +
+  geom_line() +
+  geom_vline(xintercept = as.numeric(movement_long$date[movement_long$date == '2020-03-12']), color = "black")
+```
+
+```{r plot-google-mobility}
+google_mobility_long <- corona_ire %>%
+  pivot_longer(c("gcmr_retail_recreation","gcmr_grocery_pharmacy","gcmr_parks"), #"gcmr_transit_stations",#"gcmr_workplaces","gcmr_residential"),
+               names_to = "google_mobility",
+               values_to = "mobility_pct") %>%
+  filter(date >= '2020-02-23')
+  
+
+google_mobility_long %>%
+  ggplot(aes(x = date,
+             y = mobility_pct,
+             color = google_mobility)) +
+  geom_line() +
+  geom_hline(yintercept = 0, color = "black") +
+  geom_vline(xintercept = as.numeric(movement_long$date[movement_long$date == '2020-03-12']), color = "black")
+```
+
+
+
+
+
+
+
+
+
+
