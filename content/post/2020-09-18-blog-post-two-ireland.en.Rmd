@@ -1,0 +1,319 @@
+---
+title: 'Success in the face of coronavirus? Maybe.'
+author: Samuel Lyubic
+date: '2020-09-18'
+slug: blog-post-two-ireland
+categories:
+  - Independence
+  - Politics
+tags:
+  - Crime
+  - Ireland
+subtitle: 'An analysis of how Ireland has responded to coronavirus and what this could mean for their future'
+summary: 'An analysis of how Ireland has responded to coronavirus and what this could mean for their future'
+authors: []
+lastmod: '2020-09-18T22:13:41+10:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+bibliography: references.bib
+biblio-style: authoryear-comp
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.align = "centre")
+library(coronavirus)
+library(tidycovid19)
+library(covdata)
+library(tidyverse) 
+library(lubridate)
+library(ggridges)
+library(zoo)
+library(patchwork)
+```
+
+```{r data-sources, include = FALSE, message = FALSE, warning = FALSE}
+corona_ire <- download_merged_data(cached = TRUE, silent = TRUE) %>%
+  filter(iso3c == "IRL")
+covid19_ire <- refresh_coronavirus_jhu() %>%
+  filter(location == "Ireland")
+covdata_ire <- covnat %>%
+  filter(iso3 == "IRL")
+apple_mobility_ire <- apple_mobility %>%
+  filter(country == "Ireland")
+```
+
+```{r change-cases-deaths-per-100k, include = FALSE, message = FALSE, warning = FALSE}
+cases_deaths_per_100k <- covdata_ire %>%
+  mutate(cases_per_100k = (cases/pop)*100000,
+         deaths_per_100k = (deaths/pop)*10000)
+```
+
+```{r cases-death-plot, include = FALSE, message = FALSE, warning = FALSE}
+
+#think about making it per100k but also maybe not,as im not comparing with another country
+p1 <- cases_deaths_per_100k %>%
+  filter(date >= '2020-03-14') %>%
+  ggplot(aes(x = date,
+             y = cases)) +
+  geom_segment(aes(x = date, 
+                   xend = date, 
+                   y = 0, 
+                   yend = cases)) +
+  geom_point(size = 1, 
+             color = "#8fe0bb", 
+             fill = alpha("#dcdf3c", 0.3), 
+             alpha = 0.7, 
+             shape = 21,
+             stroke = 2) +
+  geom_line(alpha = .5) +
+  labs(title = "Ireland's daily confirmed cases",
+       x = "Date",
+       y = "Cases",
+       tag = "(A)") +
+  theme_minimal() +
+  theme(panel.background = element_blank(),
+      plot.title.position = "plot",
+      plot.margin = margin(10, 10, 10, 10),
+      axis.line = element_line(colour = "black"))
+  
+
+p2 <- cases_deaths_per_100k %>%
+  filter(date >= '2020-03-14') %>%
+  ggplot(aes(x = date,
+             y = deaths)) +
+  geom_segment(aes(x = date, 
+                   xend = date, 
+                   y = 0, 
+                   yend = deaths)) +
+  geom_point(size = 1, 
+             color = "#8fe0bb", 
+             fill = alpha("#b23831", 0.3), 
+             alpha = 0.7, 
+             shape = 21,
+             stroke = 2) +
+  geom_line(alpha = .5) +
+  labs(title = "Ireland's daily deaths",
+       x = "Date",
+       y = "Deaths",
+       tags = "(B)") +
+  theme_minimal() +
+  theme(panel.background = element_blank(),
+      plot.title.position = "plot",
+      plot.margin = margin(10, 10, 10, 10),
+      axis.line = element_line(colour = "black"))
+```
+
+# Data Description
+
+The corona virus data used for the analysis has been sourced from the following packages _tidycovid19_ package developed by @tidy and the _covdata_ package developed by @covdata. The key variables from each dataset are as follows:
+
+  - *tidycovid19*:
+    - _soc_dist_: Number of social distancing measures reported up to date by ACAPS, net of lifted restrictions.
+    - _mov_rest_: Number of movement restrictions reported up to date by ACAPS, net of lifted restrictions.
+    - _pub_health_: Number of public health measures reported up to date by ACAPS, net of lifted restrictions.
+    - _apple_mtr_driving_: Apple Maps usage for driving directions, as percentage*100 relative to the baseline of Jan 13, 2020.
+    - _apple_mtr_walking_: Apple Maps usage for walking directions, as percentage*100 relative to the baseline of Jan 13, 2020.
+    - _apple_mtr_transit_: Apple Maps usage for public transit directions, as percentage*100 relative to the baseline of Jan 13, 2020.
+    - _gcmr_retail_recreation_: Google Community Mobility Reports data for the frequency that people visit retail and recreation places expressed as a percentage*100 change relative to the baseline period Jan 3 - Feb 6, 2020
+    - _gcmr_grocery_pharmacy_: Google Community Mobility Reports data for the frequency that people visit grocery stores and pharmacies expressed as a percentage*100 change relative to the baseline period Jan 3 - Feb 6, 2020
+    - _gcmr_parks_: Google Community Mobility Reports data for the frequency that people visit parks expressed as a percentage*100 change relative to the baseline period Jan 3 - Feb 6, 2020
+
+  - *covdata*
+    - _cases_: Daily confirmed coronavirus cases
+    - _deaths_: Daily confirmed coronavirus deaths
+    
+# A sign for independence
+
+Ireland has a long divise history with a war for independence from the United Kingdom, with conflict dating back to 1917 and the subsequent creation of the independent Irish Free State in 1948. The two states in Ireland then becamse - the Republic of Ireland and Northern Ireland, with populations of 4.904 million and 1.822 million (@IrishStory). The idea of an independent Ireland has been quite divisive, with the argument against Independence citing Ireland would not be able to economically stand on its own and the benefits of the UK health care system however, these arguments are now being considered weak and outdated. The current belief among many politicians and the public, is that Ireland could stand on its own financially and with the recent brexit vote, the conversation for independence, and to rid the Irish of the connection to their the brutal history, has been reignited (@Atlantic). 
+
+The global pandemic that is coronavirus has not only furthered but has aflame the discussion of independence, as given Ireland is split into two states - The republic of Ireland and Northern Ireland, there is now a direct case study with coronavirus results as the proxy for the ability for Ireland to stand united against the benefits and of Northern Ireland remaining as part of the UK and Ireland stay divided. When the corona virus began to run rampid in Europe the Irish government offered clarity and clear instructions to combat the virus and acted quickly and decisively to implent a range of restrictions and health measures in order to get ontop of the highly contagious virus, as presented in Figure \@ref(fig:measures-figure) (@Guardian). 
+
+
+```{r restriction-measures, inlude = FALSE}
+corona_ire_long <- corona_ire %>%
+  pivot_longer(c("soc_dist", "mov_rest", "pub_health"),
+               names_to = "measure",
+               values_to = "number_measures") %>%
+  select(date, measure, number_measures, confirmed) %>%
+  mutate(month = month(date, abbr = TRUE, label = TRUE)) %>%
+  group_by(month) %>%
+  mutate(day_number = day(date),
+         day_number = as.numeric(as.character(day_number)))
+
+corona_ire_clean <- corona_ire %>%
+  select(date, soc_dist, mov_rest, pub_health, confirmed) %>%
+  mutate(month = month(date, abbr = TRUE, label = TRUE)) %>%
+  group_by(month) %>%
+  mutate(day_number = day(date),
+         day_number = as.numeric(date))
+```
+
+```{r measures-plot, include = FALSE, message = FALSE, warning = FALSE}
+soc_dist_plot <- corona_ire_clean %>%
+  filter(date >= '2020-03-14') %>%
+  ggplot(aes(x = soc_dist,
+             y = month,
+             fill = "#FFFFFF")) +
+  geom_density_ridges(alpha = .5) +
+  theme_bw() +
+  theme(legend.position = "none") +
+  labs(title = "Social Distancing",
+       x = "Number of Measures",
+       y = "Month",
+       tags = "(A)") +
+  theme(text = element_text(size = 12, color = "white"),
+      rect = element_rect(fill = "black"),
+      panel.background = element_rect(fill = "black"),
+      legend.key = element_rect(fill = "black"),
+      axis.text = element_text(color = "white"),
+      plot.title.position = "plot",
+      plot.margin = margin(10, 10, 10, 10)) 
+
+mov_res_plot <- corona_ire_clean %>%
+  filter(date >= '2020-03-14') %>%
+  ggplot(aes(x = mov_rest,
+             y = month,
+             fill = "#FFFFFF")) +
+  geom_density_ridges(alpha = .5) +
+  theme_bw() +
+  theme(legend.position = "none") +
+  labs(title = "Movement
+        Restriction",
+       x = "Number of Measures",
+       y = "Month",
+       tags = "(B)") +
+  theme(text = element_text(size = 12, color = "white"),
+      rect = element_rect(fill = "black"),
+      panel.background = element_rect(fill = "black"),
+      legend.key = element_rect(fill = "black"),
+      axis.text = element_text(color = "white"),
+      plot.title.position = "plot",
+      plot.margin = margin(10, 10, 10, 10))
+
+pub_health <- corona_ire_clean %>%
+  filter(date >= '2020-03-14') %>%
+  ggplot(aes(x = pub_health,
+             y = month,
+             fill = "#C0C0C0")) +
+  geom_density_ridges(alpha = .5) +
+  theme_bw() +
+  theme(legend.position = "none") +
+  labs(title = "Public Health",
+       x = "Number of Measures",
+       y = "Month",
+       tags = "(C)") +
+  theme(text = element_text(size = 12, color = "white"),
+      rect = element_rect(fill = "black"),
+      panel.background = element_rect(fill = "black"),
+      legend.key = element_rect(fill = "black"),
+      axis.text = element_text(color = "white"),
+      plot.title.position = "plot",
+      plot.margin = margin(10, 10, 10, 10)) 
+```
+
+```{r measures-figure, fig.cap = "Range of measures introduced by the Irish government"}
+soc_dist_plot + mov_res_plot + pub_health + plot_layout(nrow = 3)
+```
+
+Figure \@ref(fig:measures-figure) displays the number of health measures implented by the Irish government each month, with the density plots for each month showing the propotion of days spent with certain number of active measures each month. It was on the 13th of March Ireland had implemented school and universities were closes, stay home orders given to go with a total 15 social distance measures being implemented on the 24th which rose to 18 for the whole of April and through to may 17th. This period was accompanied with 5 moving restrictions being implented from the 28th of March travel restriction and border closure being among the 5, with the total number of movement restrictions reaching 8 from the 10th of April through to June 7th where they dropped to 5. As well as, a total of 21 public health measures to date (@Guardian). As shown in Figure \@ref(fig:cases-deaths-plot), the fast and swift decsion making saw Ireland control their death rates and daily cases, with the April being the worst month of daily cases however, a relatively fast decline from april to may as showin in plot (A), thus avoiding a catastrophic blow out on their citizens and health care system and given their ability to control the early breakout have kept at bay a second wave that has terrorised many other countries. Plot (B) of Figure \@ref(fig:cases-deaths-plot) shows the daily deaths in Ireland, one unique observation is April 24th which was a reconciliation day where 185 probable deaths, that is deaths the person was suspected to have coronavirus howeever, not yet tested, were added to the tally. Similarly to plot(A), the swift policy decisions show a contained death tally and a second wave held at bay.
+
+```{r cases-deaths-plot, fig.cap = "Figure displaying the daily counts for cases and deaths in Ireland"}
+p1 + p2 + plot_layout(nrow = 2)
+
+```
+
+While the Repbulic of Ireland was acting fast and making what can now be considered as the right decsions, Northern Ireland was left entangled with the UK slow reaction and what has been deemd failed response to covid, which saw the UK have relatively huge daily cases and death rates due to their lack of preperation of the medical system and implentation of appropriate policy (@UKFail). Given North Ireland is governed by the UK they also fell victim to the UK's poor reaction to coronavirus and has highlighted how the Repblic of Ireland, when needed most, stood up for its countrymen and women and made the right decision, so maybe the next will a decision for independence?
+
+# Wonderwoman, Batman, Superman and Coronavirus?
+
+```{r baseline-movement, include = FALSE, message = FALSE, warning = FALSE}
+baseline_movement <- corona_ire %>%
+  filter(date <= '2020-02-22') %>% 
+  select(apple_mtr_walking, apple_mtr_driving, apple_mtr_transit) %>%
+  summarise(walk_baseline = mean(apple_mtr_walking),
+            drive_baseline = mean(apple_mtr_driving),
+            transit_baseline = mean(apple_mtr_transit))
+```
+
+```{r change-movement, include = FALSE, message = FALSE, warning = FALSE}
+movement_long <- corona_ire %>%
+  pivot_longer(c("apple_mtr_walking", "apple_mtr_driving", "apple_mtr_transit"),
+               names_to = "movement",
+               values_to = "move_pct") %>%
+  filter(date >= '2020-02-23')
+```
+
+```{r plot-movement, include = FALSE, message = FALSE, warning = FALSE}
+a1 <- movement_long %>%
+  ggplot(aes(x = date,
+             y = move_pct,
+             color = movement)) +
+  geom_line() +
+  geom_vline(xintercept = as.numeric(movement_long$date[movement_long$date == '2020-03-12']), color = "black", alpha = .6) +
+  scale_x_date(date_breaks = "1 month", date_minor_breaks = "1 week",
+             date_labels = "%b") +
+  labs(title = "Apple Maps Usage for Directions",
+       x = "Date",
+       y = "Percentage",
+       tags = "(B)",
+       color = "Apple Direction 
+      Searches") +
+  theme_minimal() +
+  theme(panel.background = element_blank(),
+      plot.title.position = "plot",
+      plot.margin = margin(10, 10, 10, 10),
+      axis.line = element_line(colour = "black"))
+```
+
+```{r plot-google-mobility, include = FALSE, message = FALSE, warning = FALSE}
+google_mobility_long <- corona_ire %>%
+  pivot_longer(c("gcmr_retail_recreation","gcmr_grocery_pharmacy","gcmr_parks"), #"gcmr_transit_stations",#"gcmr_workplaces","gcmr_residential"),
+               names_to = "google_mobility",
+               values_to = "mobility_pct") %>%
+  filter(date >= '2020-02-23')
+  
+
+g1 <- google_mobility_long %>%
+  ggplot(aes(x = date,
+             y = mobility_pct,
+             color = google_mobility)) +
+  geom_line() +
+  geom_hline(yintercept = 0, color = "black", alpha = .6) +
+  geom_vline(xintercept = as.numeric(movement_long$date[movement_long$date == '2020-03-12']), color = "black", alpha = .6)  +
+  theme_linedraw() +
+  scale_x_date(date_breaks = "1 month", date_minor_breaks = "1 week",
+             date_labels = "%b") +
+  labs(title = "Google Community Mobility Reports",
+       x = "Date",
+       y = "Percentage",
+       tags = "(A)",
+       color = "Mobility Locations") +
+  theme_minimal() +
+  theme(panel.background = element_blank(),
+      plot.title.position = "plot",
+      plot.margin = margin(10, 10, 10, 10),
+      axis.line = element_line(colour = "black"))
+```
+
+What Wonderwoman, Batman and Superman all have in common is that they are crime fighers and it seems that coronavirus may be too. The extensive range of restrictive and public health measures that have been implemented by the government of Ireland have worked effectively to combat the deadly coronavirus however, as a side effect it seems that it has also led to an unprecedented reduction in crime. Figure \@ref(fig:mobility-plot) displays two plots, (A) and (B) that display the change in movement for Irish citizens since the the first social distancing measure was implented on the 12th of March 2020, as represented by the vertical black line. 
+
+```{r mobility-plot, fig.cap = "Figure showing the change in movement for Irish citizens"}
+g1 + a1 + plot_layout(nrow = 2)
+```
+
+Plot (A) shows the Google community mobility reports for the frequence of attendance in groceries and pharmacies, parks and retail and recreation places, as a percentage to the baseline period which is Jan 3rd through to Feb 6th, 2020. While Plot (B) shows the Apple maps usafe for walking, driving and public transit direacitons as percentage relative to the baseline of Jan 13 2020. It is clear from the plot (B), that from the first restriction being implented there was a drastic change in the percentage of Apple maps usage which lasted through till May 17th when restrictions eased and a gradual rise is seen across driving, walking and transit. Plot (A) illustrates that frequenct of visits to retail and recreational areas dropped significantly from the first measure being introduced on March 12th all the way through to the first set of easements in May. Given the reduction in people movement and congregation at retail and recretional areas as well stay home order being in place Ireland saw a reduction in burglaries of -44%, shoplifting cases reduce by 39% and theft of motor vehicles and bicycles reduce by 43% (@CrimeIre), which has been attributed to the impact of the reactive policy to coronavirus.
+
+Thus showing that maybe the police's job isn't so hard, or maybe, crime isn't that hard to fight and all it takes is a pandemic!
+
+# Acknowledgements and packages used
+@tidy
+@covdata
+@tidyverse
+@lubri
+@ridge
+@zoo
+@patch

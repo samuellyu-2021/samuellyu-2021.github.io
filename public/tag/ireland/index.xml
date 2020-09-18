@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ireland | Samuel Lyubic Analytics</title>
+    <link>/tag/ireland/</link>
+      <atom:link href="/tag/ireland/index.xml" rel="self" type="application/rss+xml" />
+    <description>Ireland</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2020</copyright><lastBuildDate>Fri, 18 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Ireland</title>
+      <link>/tag/ireland/</link>
+    </image>
+    
+    <item>
+      <title>Success in the face of coronavirus? Maybe.</title>
+      <link>/post/blog-post-two-ireland/</link>
+      <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/post/blog-post-two-ireland/</guid>
+      <description>
+
+
+&lt;div id=&#34;data-description&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Data Description&lt;/h1&gt;
+&lt;p&gt;The corona virus data used for the analysis has been sourced from the following packages &lt;em&gt;tidycovid19&lt;/em&gt; package developed by &lt;span class=&#34;citation&#34;&gt;Gassen (2020)&lt;/span&gt; and the &lt;em&gt;covdata&lt;/em&gt; package developed by &lt;span class=&#34;citation&#34;&gt;Healy (2020)&lt;/span&gt;. The key variables from each dataset are as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;tidycovid19&lt;/em&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;soc_dist&lt;/em&gt;: Number of social distancing measures reported up to date by ACAPS, net of lifted restrictions.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;mov_rest&lt;/em&gt;: Number of movement restrictions reported up to date by ACAPS, net of lifted restrictions.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;pub_health&lt;/em&gt;: Number of public health measures reported up to date by ACAPS, net of lifted restrictions.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;apple_mtr_driving&lt;/em&gt;: Apple Maps usage for driving directions, as percentage*100 relative to the baseline of Jan 13, 2020.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;apple_mtr_walking&lt;/em&gt;: Apple Maps usage for walking directions, as percentage*100 relative to the baseline of Jan 13, 2020.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;apple_mtr_transit&lt;/em&gt;: Apple Maps usage for public transit directions, as percentage*100 relative to the baseline of Jan 13, 2020.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;gcmr_retail_recreation&lt;/em&gt;: Google Community Mobility Reports data for the frequency that people visit retail and recreation places expressed as a percentage*100 change relative to the baseline period Jan 3 - Feb 6, 2020&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;gcmr_grocery_pharmacy&lt;/em&gt;: Google Community Mobility Reports data for the frequency that people visit grocery stores and pharmacies expressed as a percentage*100 change relative to the baseline period Jan 3 - Feb 6, 2020&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;gcmr_parks&lt;/em&gt;: Google Community Mobility Reports data for the frequency that people visit parks expressed as a percentage*100 change relative to the baseline period Jan 3 - Feb 6, 2020&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;covdata&lt;/em&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;cases&lt;/em&gt;: Daily confirmed coronavirus cases&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;deaths&lt;/em&gt;: Daily confirmed coronavirus deaths&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a-sign-for-independence&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;A sign for independence&lt;/h1&gt;
+&lt;p&gt;Ireland has a long divise history with a war for independence from the United Kingdom, with conflict dating back to 1917 and the subsequent creation of the independent Irish Free State in 1948. The two states in Ireland then becamse - the Republic of Ireland and Northern Ireland, with populations of 4.904 million and 1.822 million (&lt;span class=&#34;citation&#34;&gt;Dorney (2020)&lt;/span&gt;). The idea of an independent Ireland has been quite divisive, with the argument against Independence citing Ireland would not be able to economically stand on its own and the benefits of the UK health care system however, these arguments are now being considered weak and outdated. The current belief among many politicians and the public, is that Ireland could stand on its own financially and with the recent brexit vote, the conversation for independence, and to rid the Irish of the connection to their the brutal history, has been reignited (&lt;span class=&#34;citation&#34;&gt;O’loughlan (2019)&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;The global pandemic that is coronavirus has not only furthered but has aflame the discussion of independence, as given Ireland is split into two states - The republic of Ireland and Northern Ireland, there is now a direct case study with coronavirus results as the proxy for the ability for Ireland to stand united against the benefits and of Northern Ireland remaining as part of the UK and Ireland stay divided. When the corona virus began to run rampid in Europe the Irish government offered clarity and clear instructions to combat the virus and acted quickly and decisively to implent a range of restrictions and health measures in order to get ontop of the highly contagious virus, as presented in Figure &lt;a href=&#34;#fig:measures-figure&#34;&gt;1&lt;/a&gt; (&lt;span class=&#34;citation&#34;&gt;Mullally (2020)&lt;/span&gt;).&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: centre&#34;&gt;&lt;span id=&#34;fig:measures-figure&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/2020-09-18-blog-post-two-ireland.en_files/figure-html/measures-figure-1.png&#34; alt=&#34;Range of measures introduced by the Irish government&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: Range of measures introduced by the Irish government
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Figure &lt;a href=&#34;#fig:measures-figure&#34;&gt;1&lt;/a&gt; displays the number of health measures implented by the Irish government each month, with the density plots for each month showing the propotion of days spent with certain number of active measures each month. It was on the 13th of March Ireland had implemented school and universities were closes, stay home orders given to go with a total 15 social distance measures being implemented on the 24th which rose to 18 for the whole of April and through to may 17th. This period was accompanied with 5 moving restrictions being implented from the 28th of March travel restriction and border closure being among the 5, with the total number of movement restrictions reaching 8 from the 10th of April through to June 7th where they dropped to 5. As well as, a total of 21 public health measures to date (&lt;span class=&#34;citation&#34;&gt;Mullally (2020)&lt;/span&gt;). As shown in Figure &lt;a href=&#34;#fig:cases-deaths-plot&#34;&gt;2&lt;/a&gt;, the fast and swift decsion making saw Ireland control their death rates and daily cases, with the April being the worst month of daily cases however, a relatively fast decline from april to may as showin in plot (A), thus avoiding a catastrophic blow out on their citizens and health care system and given their ability to control the early breakout have kept at bay a second wave that has terrorised many other countries. Plot (B) of Figure &lt;a href=&#34;#fig:cases-deaths-plot&#34;&gt;2&lt;/a&gt; shows the daily deaths in Ireland, one unique observation is April 24th which was a reconciliation day where 185 probable deaths, that is deaths the person was suspected to have coronavirus howeever, not yet tested, were added to the tally. Similarly to plot(A), the swift policy decisions show a contained death tally and a second wave held at bay.&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: centre&#34;&gt;&lt;span id=&#34;fig:cases-deaths-plot&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/2020-09-18-blog-post-two-ireland.en_files/figure-html/cases-deaths-plot-1.png&#34; alt=&#34;Figure displaying the daily counts for cases and deaths in Ireland&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 2: Figure displaying the daily counts for cases and deaths in Ireland
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;While the Repbulic of Ireland was acting fast and making what can now be considered as the right decsions, Northern Ireland was left entangled with the UK slow reaction and what has been deemd failed response to covid, which saw the UK have relatively huge daily cases and death rates due to their lack of preperation of the medical system and implentation of appropriate policy (&lt;span class=&#34;citation&#34;&gt;WalkerP (2020)&lt;/span&gt;). Given North Ireland is governed by the UK they also fell victim to the UK’s poor reaction to coronavirus and has highlighted how the Repblic of Ireland, when needed most, stood up for its countrymen and women and made the right decision, so maybe the next will a decision for independence?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;wonderwoman-batman-superman-and-coronavirus&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Wonderwoman, Batman, Superman and Coronavirus?&lt;/h1&gt;
+&lt;p&gt;What Wonderwoman, Batman and Superman all have in common is that they are crime fighers and it seems that coronavirus may be too. The extensive range of restrictive and public health measures that have been implemented by the government of Ireland have worked effectively to combat the deadly coronavirus however, as a side effect it seems that it has also led to an unprecedented reduction in crime. Figure &lt;a href=&#34;#fig:mobility-plot&#34;&gt;3&lt;/a&gt; displays two plots, (A) and (B) that display the change in movement for Irish citizens since the the first social distancing measure was implented on the 12th of March 2020, as represented by the vertical black line.&lt;/p&gt;
+&lt;div class=&#34;figure&#34; style=&#34;text-align: centre&#34;&gt;&lt;span id=&#34;fig:mobility-plot&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/2020-09-18-blog-post-two-ireland.en_files/figure-html/mobility-plot-1.png&#34; alt=&#34;Figure showing the change in movement for Irish citizens&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 3: Figure showing the change in movement for Irish citizens
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Plot (A) shows the Google community mobility reports for the frequence of attendance in groceries and pharmacies, parks and retail and recreation places, as a percentage to the baseline period which is Jan 3rd through to Feb 6th, 2020. While Plot (B) shows the Apple maps usafe for walking, driving and public transit direacitons as percentage relative to the baseline of Jan 13 2020. It is clear from the plot (B), that from the first restriction being implented there was a drastic change in the percentage of Apple maps usage which lasted through till May 17th when restrictions eased and a gradual rise is seen across driving, walking and transit. Plot (A) illustrates that frequenct of visits to retail and recreational areas dropped significantly from the first measure being introduced on March 12th all the way through to the first set of easements in May. Given the reduction in people movement and congregation at retail and recretional areas as well stay home order being in place Ireland saw a reduction in burglaries of -44%, shoplifting cases reduce by 39% and theft of motor vehicles and bicycles reduce by 43% (&lt;span class=&#34;citation&#34;&gt;MacNamee (2020)&lt;/span&gt;), which has been attributed to the impact of the reactive policy to coronavirus.&lt;/p&gt;
+&lt;p&gt;Thus showing that maybe the police’s job isn’t so hard, or maybe, crime isn’t that hard to fight and all it takes is a pandemic!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgements-and-packages-used&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Acknowledgements and packages used&lt;/h1&gt;
+&lt;p&gt;&lt;span class=&#34;citation&#34;&gt;Gassen (2020)&lt;/span&gt;
+&lt;span class=&#34;citation&#34;&gt;Healy (2020)&lt;/span&gt;
+&lt;span class=&#34;citation&#34;&gt;Wickham et al. (2019)&lt;/span&gt;
+&lt;span class=&#34;citation&#34;&gt;Grolemund and Wickham (2011)&lt;/span&gt;
+&lt;span class=&#34;citation&#34;&gt;Wilke (2020)&lt;/span&gt;
+&lt;span class=&#34;citation&#34;&gt;Zeileis and Grothendieck (2005)&lt;/span&gt;
+&lt;span class=&#34;citation&#34;&gt;Pedersen (2020)&lt;/span&gt;&lt;/p&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-IrishStory&#34;&gt;
+&lt;p&gt;Dorney, J. 2020. &lt;em&gt;Https://Www.theirishstory.com/2012/09/18/the-Irish-War-of-Independence-a-Brief-Overview/#.X2Srj5Mzbwd&lt;/em&gt;. &lt;a href=&#34;https://www.theirishstory.com/2012/09/18/the-irish-war-of-independence-a-brief-overview/#.X2Srj5Mzbwd&#34;&gt;https://www.theirishstory.com/2012/09/18/the-irish-war-of-independence-a-brief-overview/#.X2Srj5Mzbwd&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-tidy&#34;&gt;
+&lt;p&gt;Gassen, Joachim. 2020. &lt;em&gt;Tidycovid19: Download, Tidy and Visualize Covid-19 Related Data&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-lubri&#34;&gt;
+&lt;p&gt;Grolemund, Garrett, and Hadley Wickham. 2011. “Dates and Times Made Easy with lubridate.” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 40 (3): 1–25. &lt;a href=&#34;http://www.jstatsoft.org/v40/i03/&#34;&gt;http://www.jstatsoft.org/v40/i03/&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-covdata&#34;&gt;
+&lt;p&gt;Healy, Kieran. 2020. &lt;em&gt;Covdata: COVID-19 Case and Mortality Time Series&lt;/em&gt;. &lt;a href=&#34;http://kjhealy.github.io/covdata&#34;&gt;http://kjhealy.github.io/covdata&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-CrimeIre&#34;&gt;
+&lt;p&gt;MacNamee, G. 2020. &lt;em&gt;Garda Stats: Domestic Violence, Drug Possession and Fraud on the Rise During Lockdown&lt;/em&gt;. &lt;a href=&#34;https://www.thejournal.ie/pandemic-garda-crime-stats-5121435-Jun2020/&#34;&gt;https://www.thejournal.ie/pandemic-garda-crime-stats-5121435-Jun2020/&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Guardian&#34;&gt;
+&lt;p&gt;Mullally, U. 2020. &lt;em&gt;How Coronavirus Is Spurring the Cause of a United Ireland&lt;/em&gt;. &lt;a href=&#34;https://www.theguardian.com/commentisfree/2020/may/02/coronavirus-united-ireland-pandemic-&#34;&gt;https://www.theguardian.com/commentisfree/2020/may/02/coronavirus-united-ireland-pandemic-&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Atlantic&#34;&gt;
+&lt;p&gt;O’loughlan, Ed. 2019. &lt;em&gt;The “Messy and Angry” Prospect of Ireland Reunifying&lt;/em&gt;. &lt;a href=&#34;https://www.theatlantic.com/international/archive/2019/10/ireland-britain-brexit-reunification/600328/&#34;&gt;https://www.theatlantic.com/international/archive/2019/10/ireland-britain-brexit-reunification/600328/&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-patch&#34;&gt;
+&lt;p&gt;Pedersen, Thomas Lin. 2020. &lt;em&gt;Patchwork: The Composer of Plots&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=patchwork&#34;&gt;https://CRAN.R-project.org/package=patchwork&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-UKFail&#34;&gt;
+&lt;p&gt;WalkerP. 2020. &lt;em&gt;Six Points of Criticism: UK Government’s Flailing Coronavirus Response&lt;/em&gt;. &lt;a href=&#34;https://www.theguardian.com/uk-news/2020/apr/19/six-points-of-criticism-uk-governments-flailing-coronavirus-response&#34;&gt;https://www.theguardian.com/uk-news/2020/apr/19/six-points-of-criticism-uk-governments-flailing-coronavirus-response&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-tidyverse&#34;&gt;
+&lt;p&gt;Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. “Welcome to the tidyverse.” &lt;em&gt;Journal of Open Source Software&lt;/em&gt; 4 (43): 1686. &lt;a href=&#34;https://doi.org/10.21105/joss.01686&#34;&gt;https://doi.org/10.21105/joss.01686&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-ridge&#34;&gt;
+&lt;p&gt;Wilke, Claus O. 2020. &lt;em&gt;Ggridges: Ridgeline Plots in ’Ggplot2’&lt;/em&gt;. &lt;a href=&#34;https://CRAN.R-project.org/package=ggridges&#34;&gt;https://CRAN.R-project.org/package=ggridges&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-zoo&#34;&gt;
+&lt;p&gt;Zeileis, Achim, and Gabor Grothendieck. 2005. “Zoo: S3 Infrastructure for Regular and Irregular Time Series.” &lt;em&gt;Journal of Statistical Software&lt;/em&gt; 14 (6): 1–27. &lt;a href=&#34;https://doi.org/10.18637/jss.v014.i06&#34;&gt;https://doi.org/10.18637/jss.v014.i06&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

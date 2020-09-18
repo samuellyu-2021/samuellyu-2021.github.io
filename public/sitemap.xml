@@ -33,18 +33,43 @@
   </url>
   
   <url>
-    <loc>/post/blog-post-two/</loc>
-    <lastmod>2020-09-12T15:24:36+10:00</lastmod>
+    <loc>/categories/</loc>
+    <lastmod>2020-09-18T22:13:41+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/crime/</loc>
+    <lastmod>2020-09-18T22:13:41+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/independence/</loc>
+    <lastmod>2020-09-18T22:13:41+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/ireland/</loc>
+    <lastmod>2020-09-18T22:13:41+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/politics/</loc>
+    <lastmod>2020-09-18T22:13:41+10:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-09-12T15:24:36+10:00</lastmod>
+    <lastmod>2020-09-18T22:13:41+10:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2020-09-04T02:20:49+10:00</lastmod>
+    <loc>/post/blog-post-two-ireland/</loc>
+    <lastmod>2020-09-18T22:13:41+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-09-18T22:13:41+10:00</lastmod>
   </url>
   
   <url>
@@ -58,22 +83,12 @@
   </url>
   
   <url>
-    <loc>/category/politics/</loc>
-    <lastmod>2020-09-04T02:20:49+10:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tag/serbia/</loc>
     <lastmod>2020-09-04T02:20:49+10:00</lastmod>
   </url>
   
   <url>
     <loc>/category/statistics/</loc>
-    <lastmod>2020-09-04T02:20:49+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2020-09-04T02:20:49+10:00</lastmod>
   </url>
   
