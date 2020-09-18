@@ -126,7 +126,7 @@ The corona virus data used for the analysis has been sourced from the following 
     - _cases_: Daily confirmed coronavirus cases
     - _deaths_: Daily confirmed coronavirus deaths
     
-# A sign for independence
+# A Sign For Independence
 
 Ireland has a long divise history with a war for independence from the United Kingdom, with conflict dating back to 1917 and the subsequent creation of the independent Irish Free State in 1948. The two states in Ireland then becamse - the Republic of Ireland and Northern Ireland, with populations of 4.904 million and 1.822 million (@IrishStory). The idea of an independent Ireland has been quite divisive, with the argument against Independence citing Ireland would not be able to economically stand on its own and the benefits of the UK health care system however, these arguments are now being considered weak and outdated. The current belief among many politicians and the public, is that Ireland could stand on its own financially and with the recent brexit vote, the conversation for independence, and to rid the Irish of the connection to their the brutal history, has been reignited (@Atlantic). 
 
