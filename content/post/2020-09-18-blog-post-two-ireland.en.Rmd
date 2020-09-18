@@ -215,13 +215,13 @@ pub_health <- corona_ire_clean %>%
       plot.margin = margin(10, 10, 10, 10)) 
 ```
 
-```{r measures-figure, fig.cap = "Range of measures introduced by the Irish government"}
+```{r measures-figure, out.height = "150%", out.width = "150%, fig.cap = "Range of measures introduced by the Irish government"}
 soc_dist_plot + mov_res_plot + pub_health + plot_layout(nrow = 3)
 ```
 
 Figure \@ref(fig:measures-figure) displays the number of health measures implented by the Irish government each month, with the density plots for each month showing the propotion of days spent with certain number of active measures each month. It was on the 13th of March Ireland had implemented school and universities were closes, stay home orders given to go with a total 15 social distance measures being implemented on the 24th which rose to 18 for the whole of April and through to may 17th. This period was accompanied with 5 moving restrictions being implented from the 28th of March travel restriction and border closure being among the 5, with the total number of movement restrictions reaching 8 from the 10th of April through to June 7th where they dropped to 5. As well as, a total of 21 public health measures to date (@Guardian). As shown in Figure \@ref(fig:cases-deaths-plot), the fast and swift decsion making saw Ireland control their death rates and daily cases, with the April being the worst month of daily cases however, a relatively fast decline from april to may as showin in plot (A), thus avoiding a catastrophic blow out on their citizens and health care system and given their ability to control the early breakout have kept at bay a second wave that has terrorised many other countries. Plot (B) of Figure \@ref(fig:cases-deaths-plot) shows the daily deaths in Ireland, one unique observation is April 24th which was a reconciliation day where 185 probable deaths, that is deaths the person was suspected to have coronavirus howeever, not yet tested, were added to the tally. Similarly to plot(A), the swift policy decisions show a contained death tally and a second wave held at bay.
 
-```{r cases-deaths-plot, fig.cap = "Figure displaying the daily counts for cases and deaths in Ireland"}
+```{r cases-deaths-plot, out.height = "150%", out.width = "150%, fig.cap = "Figure displaying the daily counts for cases and deaths in Ireland"}
 p1 + p2 + plot_layout(nrow = 2)
 
 ```
