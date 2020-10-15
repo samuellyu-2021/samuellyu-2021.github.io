@@ -33,8 +33,63 @@
   </url>
   
   <url>
+    <loc>/category/app/</loc>
+    <lastmod>2020-10-15T15:13:36+11:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
-    <lastmod>2020-09-18T22:13:41+10:00</lastmod>
+    <lastmod>2020-10-15T15:13:36+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/corona/</loc>
+    <lastmod>2020-10-15T15:13:36+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/coronavirus/</loc>
+    <lastmod>2020-10-15T15:13:36+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/covid/</loc>
+    <lastmod>2020-10-15T15:13:36+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/ireland/</loc>
+    <lastmod>2020-10-15T15:13:36+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-10-15T15:13:36+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/review/</loc>
+    <lastmod>2020-10-15T15:13:36+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/review/</loc>
+    <lastmod>2020-10-15T15:13:36+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/blog_three/shiny-app-review/</loc>
+    <lastmod>2020-10-15T15:13:36+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-10-15T15:13:36+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/united-kingdom/</loc>
+    <lastmod>2020-10-15T15:13:36+11:00</lastmod>
   </url>
   
   <url>
@@ -48,37 +103,17 @@
   </url>
   
   <url>
-    <loc>/tag/ireland/</loc>
-    <lastmod>2020-09-18T22:13:41+10:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/category/politics/</loc>
     <lastmod>2020-09-18T22:13:41+10:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>/post/blog_two/blog-post-two-ireland/</loc>
     <lastmod>2020-09-18T22:13:41+10:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/blog-post-two-ireland/</loc>
-    <lastmod>2020-09-18T22:13:41+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-09-18T22:13:41+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/coronavirus/</loc>
-    <lastmod>2020-09-04T02:20:49+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/5523-blog-one/</loc>
+    <loc>/post/blog_one/5523-blog-one/</loc>
     <lastmod>2020-09-04T02:20:49+10:00</lastmod>
   </url>
   

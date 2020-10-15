@@ -5,7 +5,7 @@
     <link>/tag/coronavirus/</link>
       <atom:link href="/tag/coronavirus/index.xml" rel="self" type="application/rss+xml" />
     <description>Coronavirus</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2020</copyright><lastBuildDate>Fri, 04 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>2020</copyright><lastBuildDate>Thu, 15 Oct 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Coronavirus</title>
@@ -13,10 +13,22 @@
     </image>
     
     <item>
+      <title>Shiny App Review</title>
+      <link>/post/blog_three/shiny-app-review/</link>
+      <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/post/blog_three/shiny-app-review/</guid>
+      <description>
+
+
+&lt;p&gt;hello&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Coronavirus An Effective Campaign Strategy</title>
-      <link>/post/5523-blog-one/</link>
+      <link>/post/blog_one/5523-blog-one/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/post/5523-blog-one/</guid>
+      <guid>/post/blog_one/5523-blog-one/</guid>
       <description>
 &lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
