@@ -1,0 +1,56 @@
+articel-header container-fluid featured-image-wrapper mt-4 mb-4 {
+background-color: white !important;
+} 
+
+h1 {
+  font-weight:bold;
+  position: centre;
+}
+
+h2{
+  font-weight:bold;
+   max-width: fit-content;
+}
+
+h4{
+  font-weight: bold;
+  color: #dbc5f6;
+}
+
+body {
+    background-color: #76767b;
+}
+
+p {
+  color: white;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1.2rem;
+}
+
+p.caption {
+  font-size: .8rem;
+  color: #c5e0f6;
+}
+
+li { 
+  color: white;
+}
+
+img.featured-image {
+  width: 1500px;
+}
+
+
+
+img {
+  border: 4px solid black;
+  position: centre;
+}
+
+article-header container-fluid featured-image-wrapper mt-4 mb-4 {
+  background-color: black;
+}
+
+div.article-container {
+  max-width: 1200px;
+}
