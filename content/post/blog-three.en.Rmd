@@ -23,10 +23,10 @@ image:
   caption: ''
   focal_point: 'center' 
 projects: []
-css: styling.css
+css: /styling.css
 ---
 
-![](featured.png)
+![](/img/featured.png)
 
 <br>
 
@@ -41,7 +41,7 @@ The _"Covid19: The Battle of Independence""_ is an application that focuses on c
 
 ## Where can you go?
 
-![_The applications navigation bar_](navbar.png)
+![_The applications navigation bar_](/img/navbar.png)
 
 This application provides four web pages that the user can navigate across by accessing the navigation bar that can be found along the top border of the app. The navigation bar list four separate sections, they are:
 
@@ -57,7 +57,7 @@ This application provides four web pages that the user can navigate across by ac
 
 #### About page
 
-![Figure 1: _"About" page from the "Covid19: The Battle of independence" app._](about.png)
+![Figure 1: _"About" page from the "Covid19: The Battle of independence" app._](/img/about.png)
 
 The application opens up on the _"About" page which provides the user with an informative breakdown of the purpose behind building the app by succinctly detailing the history between Ireland and the United Kingdom and the how corona virus is being used as a case study to fuel the plight of for complete Irish independence. As well. as providing information on the creator of the application.
   
@@ -65,7 +65,7 @@ The application opens up on the _"About" page which provides the user with an in
   
 #### Cases, Deaths and Government Intervention 
 
-![Figure 2: _"The Cases, Deaths and Government Intervention" page showing the side bar and on the left and the figure output on the right_](casesdeaths.png)
+![Figure 2: _"The Cases, Deaths and Government Intervention" page showing the side bar and on the left and the figure output on the right_](/img/casesdeaths.png)
 
 This section contains an interactive comparative analysis between the two countries across each of the following four statistics: 
   
@@ -79,7 +79,7 @@ The page is split into two halves, one being the side bar panel on the left hand
 
 As expressed, the user has the opportunity to select the statistic that they wish to comparatively analyse from the side bar panel and that will automatically update the  interactive figure on the main page with a comparison between Ireland and Great Britain for the chosen statistic. As shown in Figure 2, the output presents a time series line plot with the data on the x axis and the specific count or government measure on the y axis. The figure offers the user extensive interactive capabilities for them to explore the data and conduct analysis. By hovering over the corresponding line plots of the they can access information regarding: date and number of restriction/government measures in place for each nation. Furthermore, the figure offers the ability to zoom in on any section of the plot allowing the user to highlight and manipulate the plot as they please and by clicking the country names in the legend, titled Countries, the plot can be isolated for one country and the chosen variable can be individually analysed. The drop down selection box at the top of the side bar on the left hand panel provides the user with access to an extensive range of variables to select, they are as follows:
 
-![Figure 3: _Drop down selection tool._](date.png)
+![Figure 3: _Drop down selection tool._](/img/date.png)
 
   - Cumulative Confirmed Cases per capita, 100,000
   - Daily Death Total per capita, 100, 000
@@ -96,11 +96,11 @@ As expressed, the user has the opportunity to select the statistic that they wis
   - Public Health Measures
 
 The application also provides a date range selector shown below:
-![Figure 4: _date range selector_](dropd.png)
+![Figure 4: _date range selector_](/img/dropd.png)
 
 Whereby both the Figure 2 and Figure 5 will be updated to show the recorded results for the chosen date range, giving the user extreme flexibility to analyse any variable across any date range of their choosing. The date range selector is linked to both the figure and the table presented below, by updating the date range for a chosen variable the user will see the corresponding percentage breakdown of measures, restrictions and policies for the chosen date range, thus allowing the user to visualize the types of government intervention that impacted and led to changes in the trends for the chosen variable.
 
-![Figure 5: _Table presenting the monthly percentage breakdown for the range of measures, restriction and policies enacted across: social distance measures, movement restrictions and public healthy policy._](table.png)
+![Figure 5: _Table presenting the monthly percentage breakdown for the range of measures, restriction and policies enacted across: social distance measures, movement restrictions and public healthy policy._](/img/table.png)
 
 The interactive table displayed in Figure 5 provides a grouped monthly percentage breakdown across the number of measures, restrictions and policies enacted by both Ireland and United Kingdom for the following three types of government intervention:
 
@@ -114,11 +114,11 @@ Here the user can you navigate across the percentage breakdown of the three type
 
 #### Movement analysis
 
-![_Figure 6: Mobility analysis landing page_](mobilitypage.png)
+![_Figure 6: Mobility analysis landing page_](/img/mobilitypage.png)
 
 As a follow on analysis from data presented in the previous section, Figure 6 displays the Mobility analysis page. This section provides the user with the interactive analysis on the impact that covid19 government intervention has had on the mobility of residents of the major cities in both Ireland and the United Kingdom. The user is presented with a country map of either Ireland or the United Kingdom and it is up to them which country they select as this interactive map can be changed by selecting the desired country from the drop down box in the side bar, on the left hand side of Figure 6. The points on the map highlight the major cities for both countries with the size of the points being representative of the population size of the city. The interactiveness of the map allows the user to click on the highlighted cities to then generate the mobility data in the corresponding figure for the residents of that city, as shown in figure 7. 
 
-![_Figure 7: Displays the figure that visualises the mobility analysis for the chosen city when it is clicked on by the user from the map shown in Figure 6_](mobilityfig.png)
+![_Figure 7: Displays the figure that visualises the mobility analysis for the chosen city when it is clicked on by the user from the map shown in Figure 6_](/img/mobilityfig.png)
 
 When produced, Figure 7 sits below the map shown in Figure 6 and displays the movement trends of residents in the following three forms of transport: 
 
@@ -154,7 +154,7 @@ Which are recorded by apple maps who provide an activity score that is based off
   
 #### 2. Stronger link illustrated between "Cases, Deaths and Government Intervention" and "Mobility Analysis" sections
 
-  - Although the analysis sections flow well, a strong link could have been detailed for the user.
+  - Although the analysis sections flow well, a strong link could have been detailed for the user. 
   
 #### 3. Improved explanation of interactive elements
 
