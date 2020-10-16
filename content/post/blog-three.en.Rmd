@@ -1,5 +1,5 @@
 ---
-title: "App Review: Covid19: The Battle of Independence!"
+title: "App Review - Covid19: The Battle of Independence!"
 author: Samuel Lyubic
 date: '2020-10-15'
 slug: shiny-app-review
