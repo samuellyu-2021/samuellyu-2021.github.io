@@ -21,7 +21,7 @@ featured: no
 image:   
   placement: 3
   caption: ''
-  focal_point: 'center'
+  focal_point: 'center' 
 projects: []
 css: styling.css
 ---
