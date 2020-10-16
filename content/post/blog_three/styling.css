@@ -14,7 +14,16 @@ h2{
 
 h4{
   font-weight: bold;
-  color: #dbc5f6;
+  color: #bed8c5;
+}
+
+
+li::marker {
+  color: #c1c9db;
+}
+
+li::marker, h4 {
+  color: #c1c9db;
 }
 
 body {
@@ -26,6 +35,8 @@ p {
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 1.2rem;
 }
+
+
 
 p.caption {
   font-size: .8rem;
