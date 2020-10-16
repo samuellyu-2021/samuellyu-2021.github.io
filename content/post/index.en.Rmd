@@ -23,8 +23,10 @@ image:
   caption: ''
   focal_point: 'center' 
 projects: []
-css: styling.css      
+css: styling.css
 ---
+
+![](featured.png)
 
 <br>
 
@@ -182,6 +184,3 @@ As the creator of the application I can see improvements that could be made to b
 
 
 ### Thanks for reading and happy learning!
-
-
-
